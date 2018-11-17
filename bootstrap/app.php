@@ -2,8 +2,10 @@
 
 use Symfony\Component\Dotenv\Dotenv;
 
-$dotenv = new Dotenv();
-$dotenv->load(__DIR__ . '/../.env');
+if (!getenv('APP_DEBUG')) { // @TODO: fix this shit. Temporary lifehack to deploy on Heroku.
+  $dotenv = new Dotenv();
+  $dotenv->load(__DIR__ . '/../.env');
+}
 
 /*
 |--------------------------------------------------------------------------
