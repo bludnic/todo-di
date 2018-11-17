@@ -2,7 +2,6 @@
 
 namespace Todo\Providers;
 
-use Todo\Providers\ServiceProvider;
 use Todo\View\TwigView;
 
 class ViewServiceProvider extends ServiceProvider {

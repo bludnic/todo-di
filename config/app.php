@@ -89,14 +89,14 @@ return [
   ],
 
   'database' => function ($container) {
-    $capsule = new Illuminate\Database\Capsule\Manager;
+    $capsule = new Illuminate\Database\Capsule\Manager();
 
     $capsule->addConnection([
-     'driver' => getenv('DB_CONNECTION'),
-     'host' => getenv('DB_HOST'),
-     'database' => getenv('DB_DATABASE'),
-     'username' => getenv('DB_USERNAME'),
-     'password' => getenv('DB_PASSWORD')
+      'driver' => getenv('DB_CONNECTION'),
+      'host' => getenv('DB_HOST'),
+      'database' => getenv('DB_DATABASE'),
+      'username' => getenv('DB_USERNAME'),
+      'password' => getenv('DB_PASSWORD')
     ]);
 
     // Make this Capsule instance available globally.

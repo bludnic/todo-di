@@ -49,7 +49,7 @@ class Application {
   /**
    * Create a new Application instance.
    *
-   * @param  string|null  $basePath
+   * @param string|null $basePath
    * @return void
    */
   public function __construct($basePath = null) {
@@ -98,7 +98,7 @@ class Application {
   /**
    * Set the base path for the application.
    *
-   * @param  string  $basePath
+   * @param string $basePath
    * @return $this
    */
   public function setBasePath($basePath) {
@@ -125,7 +125,7 @@ class Application {
   /**
    * Get the path to the theme "app" directory.
    *
-   * @param  string  $path
+   * @param string $path
    * @return string
    */
   public function path($path = '') {
@@ -135,7 +135,7 @@ class Application {
   /**
    * Get the base path of the theme.
    *
-   * @param  string  $path
+   * @param string $path
    * @return string
    */
   public function basePath($path = '') {
@@ -145,8 +145,8 @@ class Application {
   /**
    * Get the path to the resources directory.
    *
-   * @param  string  $path
-   * @return string 
+   * @param string $path
+   * @return string
    */
   public function resourcePath($path = '') {
     return $this->basePath . '/resources' . ($path ? '/' . $path : $path);
@@ -155,8 +155,8 @@ class Application {
   /**
    * Get the path to the templates.
    *
-   * @param  string  $path
-   * @return string 
+   * @param string $path
+   * @return string
    */
   public function templatesPath() {
     return $this->resourcePath() . '/templates';
@@ -183,7 +183,7 @@ class Application {
   /**
    * Get the path to the application configuration files.
    *
-   * @param  string  $path
+   * @param string $path
    * @return string
    */
   public function configPath($path = '') {
@@ -193,7 +193,7 @@ class Application {
   /**
    * Get the path to the bootstrap directory.
    *
-   * @param  string  $path
+   * @param string $path
    * @return string
    */
   public function bootstrapPath($path = '') {
@@ -203,7 +203,7 @@ class Application {
   /**
    * Set the shared instance of the application.
    *
-   * @param  \Todo\Application|null  $app
+   * @param \Todo\Application|null $app
    * @return Application
    */
   public static function setInstance($app = null) {
@@ -215,8 +215,9 @@ class Application {
    */
   public static function getInstance(): Application {
     if (is_null(static::$instance)) {
-      static::$instance = new static;
+      static::$instance = new static();
     }
+
     return static::$instance;
   }
 

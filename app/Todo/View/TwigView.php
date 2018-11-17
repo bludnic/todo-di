@@ -5,19 +5,18 @@ namespace Todo\View;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Twig_Function;
-use Todo\View\View;
 
 class TwigView implements View {
   /**
-   * @var $twig Twig_Environment
+   * @var Twig_Environment
    */
   public $engine;
 
   /**
    * Create twig instance.
    *
-   * @param $path string Path to twig templates.
-   * @param $cache string Cache path to twig templates.
+   * @param $path string Path to twig templates
+   * @param $cache string Cache path to twig templates
    * @return $twig Twig_Environment
    */
   public function __construct($path = '', $cache = false, $debug = false) {
@@ -38,26 +37,7 @@ class TwigView implements View {
    * @return void
    */
   private function registerFunctions() {
-    $functions = [
-      // Theme functions
-      'wp_head',
-      'wp_footer',
-      'language_attributes',
-      'bloginfo',
-      'dynamic_sidebar',
-
-      // i18n functions
-      '__',
-      '_n',
-      '_x',
-      '_nx',
-      'esc_html__',
-      'esc_attr_x',
-      'esc_html_x',
-      '_e',
-      '_ex',
-      'esc_html_e'
-    ];
+    $functions = [];
 
     foreach ($functions as $function) {
       $this->engine->addFunction(new Twig_Function($function, $function));
@@ -70,7 +50,6 @@ class TwigView implements View {
    * @return void
    */
   private function registerGlobals() {
-    //
   }
 
   public function render($template, $data = []) {

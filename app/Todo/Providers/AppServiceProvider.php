@@ -2,7 +2,6 @@
 
 namespace Todo\Providers;
 
-use Todo\Providers\ServiceProvider;
 use function Todo\Helpers\view;
 use function Todo\Helpers\config;
 
@@ -24,6 +23,5 @@ class AppServiceProvider extends ServiceProvider {
    * @return void
    */
   public function register() {
-    //
   }
 }

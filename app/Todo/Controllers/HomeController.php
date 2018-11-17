@@ -2,10 +2,12 @@
 
 namespace Todo\Controllers;
 
-use Symfony\Component\HttpFoundation\{Request, JsonResponse};
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Todo\Models\Todo;
 use Todo\Services\ImageUploader;
-use function Todo\Helpers\{view, redirect};
+use function Todo\Helpers\view;
+use function Todo\Helpers\redirect;
 
 class HomeController {
   public function index() {

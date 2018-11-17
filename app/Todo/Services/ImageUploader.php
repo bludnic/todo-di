@@ -2,9 +2,7 @@
 
 namespace Todo\Services;
 
-use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-
 use function Todo\Helpers\config;
 
 class ImageUploader {

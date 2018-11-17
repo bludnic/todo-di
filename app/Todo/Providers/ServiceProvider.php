@@ -13,7 +13,7 @@ abstract class ServiceProvider {
   /**
    * Create a new service provider instance.
    *
-   * @param  Application  $app
+   * @param Application $app
    * @return void
    */
   public function __construct($container) {
@@ -25,7 +25,8 @@ abstract class ServiceProvider {
    *
    * @return void
    */
-  public function boot() {}
+  public function boot() {
+  }
 
   /**
    * Register the service provider.
