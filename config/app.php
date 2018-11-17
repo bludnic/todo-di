@@ -83,7 +83,8 @@ return [
       'host' => getenv('DB_HOST'),
       'database' => getenv('DB_DATABASE'),
       'username' => getenv('DB_USERNAME'),
-      'password' => getenv('DB_PASSWORD')
+      'password' => getenv('DB_PASSWORD'),
+      'port' => getenv('DB_PORT')
     ]);
 
     // Make this Capsule instance available globally.
