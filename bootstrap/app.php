@@ -1,9 +1,7 @@
 <?php
 
-use Symfony\Component\Dotenv\Dotenv;
-
 if (!getenv('APP_DEBUG')) { // @TODO: fix this shit. Temporary lifehack to deploy on Heroku.
-  $dotenv = new Dotenv();
+  $dotenv = new Symfony\Component\Dotenv\Dotenv();
   $dotenv->load(__DIR__ . '/../.env');
 }
 
