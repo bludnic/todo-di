@@ -17,21 +17,13 @@ return [
   |--------------------------------------------------------------------------
   | App Version
   |--------------------------------------------------------------------------
-  |
-  | Used in the following functions: wp_enqueue_style and wp_enqueue_script.
-  |
   */
   'version' => '0.0.1dev',
 
   /*
   |--------------------------------------------------------------------------
-  | Plugin Textdomain
+  | App Textdomain
   |--------------------------------------------------------------------------
-  |
-  | Determines a textdomain for your theme. Should be used to dynamically set
-  | namespace for gettext strings across theme. Remember, this value must
-  | be in sync with `Text Domain:` entry inside style.css theme file.
-  |
   */
   'textdomain' => 'todo',
 
@@ -39,11 +31,6 @@ return [
   |--------------------------------------------------------------------------
   | Theme Root Paths
   |--------------------------------------------------------------------------
-  |
-  | This values determines the "root" paths of your theme. By default,
-  | they use WordPress `get_template_directory` functions and
-  | probably you don't need make any changes in here.
-  |
   */
   'paths' => [
     'directory' => realpath(__DIR__ . '/../'),
