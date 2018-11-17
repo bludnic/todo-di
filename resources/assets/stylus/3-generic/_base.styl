@@ -1,0 +1,38 @@
+$body-background-color := #ede8e6
+
+a {
+  text-decoration: none
+}
+
+html {
+  font-family: 'Roboto'
+  font-size: 18px
+  background-color: $body-background-color
+}
+  
+body {
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+}
+
+#app {}
+.main {
+  margin-top: 32px
+}
+
+/**
+ * Align footer to bottom.
+ */
+html, body, #app {
+  height: 100%
+}
+
+#app {
+  display: flex
+  flex-direction: column
+}
+
+.main {
+  flex: 1
+}

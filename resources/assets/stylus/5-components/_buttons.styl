@@ -1,0 +1,90 @@
+$button-font-size := 16px
+$button-color := #fff
+$button-background-color := #4a4a4a
+$button-border-bottom-color := #332f2f
+
+/**
+ * Button component.
+ *
+ * 1. pseudo-element `:hover:before` is positioned relative to this block.
+ *
+ * Usage:
+ * <div class="btn">
+ *   <div class="btn__content">Primary</div>
+ * </div>
+ */
+.btn {
+  background-color: $button-background-color
+  border: 0
+  border-bottom: 2px solid $button-border-bottom-color
+  color: $button-color
+  cursor: pointer
+  font-size: $button-font-size
+  font-weight: 500
+  outline: none
+  padding: 8px 16px
+  position: relative /* [1] */
+  text-transform: uppercase
+  font-family: inherit
+
+  &__content {
+    width: inherit
+    //height: inherit
+    display: flex
+    align-items: center;
+    padding: 0 16px
+    margin: 0 auto
+    color: inherit
+  }
+  
+  &--icon {
+    width: 40px
+    height: 40px
+    min-width: 0
+    padding: 0
+    display: inline-flex
+    
+    .btn__content {
+      margin: 0
+      padding: 0
+      flex: 1 1 auto
+    }
+    
+    .icon {
+      width: inherit
+      height: inherit
+    }
+  }
+    
+  &--flat {
+    background-color: transparent !important
+    border-bottom: 0
+  }
+  
+  &--light {
+    color: #6f6f6f
+  }
+
+  &--dark {
+    color: #FFF
+  }
+  
+  &:hover {
+    //color: inherit
+  }
+
+  .btn {
+    .icon {
+      &--right {
+        margin-left: 16px
+      }
+      &--left {
+        margin-right: 16px
+      }
+    }
+  }
+
+  &:hover:before {
+    hoverCurrentColor()
+  }
+}

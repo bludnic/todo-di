@@ -1,0 +1,152 @@
+$navbar-height := 50px
+$navbar-background-color := #2d2d2d
+$navbar-color := #fff
+$navbar-burger-width := $navbar-height
+$navbar-z-index := 30
+$navbar-font-size := 16px
+
+.navbar {
+  height: $navbar-height
+  display: block
+  position: relative
+  
+  background-color: $navbar-background-color
+  color: $navbar-color
+  z-index: $navbar-z-index
+  font-size: $navbar-font-size
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5)
+
+  &__brand {
+    display: flex
+    align-items: stretch
+    height: inherit
+  }
+
+  &__menu {
+    display: none
+    position: absolute
+    top: 100%
+    width: 100%
+    background-color: inherit
+    color: inherit
+    
+    &--active {
+      display: block
+    }
+  }
+  
+  &__start {
+
+  }
+  
+  &__end {
+  }
+
+  &__item {
+    display: block
+    padding: 8px 16px
+    position: relative
+    color: inherit
+
+    &:hover:before {
+      hoverCurrentColor()
+    }
+  }
+  
+  &__item-dropdown {
+    padding: 0
+
+    &:hover:before {
+      display: none
+    }
+  }
+  
+  &__dropdown {
+
+  }
+  
+  &__brand &__item {
+    display: flex
+    align-items: center
+    
+    &:hover:before {
+      hoverCurrentColor()
+    }
+
+    img {
+      display: block
+    }
+  }
+  
+  &__burger {
+    display: flex
+    align-items: center
+    justify-content: center
+    width: $navbar-burger-width
+    position: relative
+    cursor: pointer
+    
+    &:hover:before {
+      hoverCurrentColor()
+    }
+  }
+  
+  &__spacer {
+    margin-left: auto
+  }
+}
+
++forTabletPortraitUp()
+  .navbar {
+    display: flex
+    align-items: stretch
+
+    &__burger {
+      display: none
+    }
+
+    &__menu {
+      display: flex
+      flex-grow: 1
+      position: static
+      width: auto
+    }
+
+    &__start, &__end {
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      background-color: inherit
+      color: inherit
+    }
+    
+    &__item {
+      display: flex
+      align-items: center
+
+      img {
+        display: block
+      }
+    }
+    
+    &__item-dropdown {
+      display: flex
+      background-color: inherit
+      color: inherit
+
+      &:hover {
+        .navbar__item + .navbar__dropdown {
+          display: block
+        }
+      }
+    }
+    
+    &__dropdown {
+      display: none
+      position: absolute
+      top: 100%
+      background-color: inherit
+      color: inherit
+    }
+  }

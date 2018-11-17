@@ -1,0 +1,41 @@
+$pagination-item-background-color := #dedede
+$pagination-item-color := #000
+$pagination-current-item-background-color := #4a4a4a
+$pagination-current-item-color := #FFF
+
+.pagination {
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  
+  &__prev {
+    order: 1
+  }
+  
+  &__next {
+    order: 3
+  }
+  
+  &__list {
+    order: 2
+    display: flex
+    align-items: center
+  }
+  
+  &__list-item {
+    display: block
+    margin: 4px
+  }
+  
+  &__link {
+    background-color: $pagination-item-background-color
+    color: $pagination-item-color
+    border-bottom: none
+
+    &--is-current {
+      background-color: $pagination-current-item-background-color
+      color: $pagination-current-item-color
+    }
+  }
+}

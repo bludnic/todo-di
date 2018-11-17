@@ -1,0 +1,53 @@
+$tip-font-size := 12px
+$tip-color := #fff
+$tip-background-color := #444
+
+/**
+ * A tooltip is often used to specify extra information
+ * about something when the user moves the mouse pointer
+ * over an element.
+ *
+ * 1. Override inherited styles from wp `.inside` class.
+ */
+.tip {
+  position: relative
+  line-height: 1.5 // [1]
+
+  .icon {
+    
+  }
+  
+  &__text {
+    display: none
+    font-size: $tip-font-size
+    background-color: $tip-background-color
+    text-align: center
+    color: #FFF
+    position: absolute
+    padding: 4px 8px
+    border-radius: 2px
+    width: 150px
+    top: 100%
+    left: 50%
+    margin-left: -75px
+    margin-top: 8px
+    box-sizing: border-box
+    z-index: 10
+  }
+  
+  &:hover &__text {
+    display: block
+  }
+  
+  &--left {
+    margin-right: 8px
+  }
+  
+  &--right {
+    margin-left: 8px
+  }
+  
+  &--cursor {
+    cursor: pointer
+  }
+}

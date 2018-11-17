@@ -1,0 +1,47 @@
+/**
+ * Simplified flex layout.
+ *
+ * Usage:
+ * <div class="y-row y-wrap">
+ *   <div class="xs6">
+ *   </div>
+ *   <div class="xs6">
+ *   </div>
+ * </div>
+ *
+ */
+
+$flex-grid-size := 12
+
+.y-row {
+  display: flex
+  flex-direction: row
+
+  // Columns
+  +forPhoneOnly() {
+    for size in (1..$flex-grid-size) {
+      .y-xs{size} {
+        width: (100 / ($flex-grid-size / size))%
+      }
+    }
+  }
+  +forTabletPortraitUp() {
+    for size in (1..$flex-grid-size) {
+      .y-md{size} {
+        width: (100 / ($flex-grid-size / size))%
+      }
+    }
+  }
+  
+  &.y-gap > div {
+    padding: 8px
+  }
+}
+
+.y-wrap {
+  flex-wrap: wrap
+}
+
+.y-justify-space-between {
+  justify-content: space-between
+}

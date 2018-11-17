@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+$allFiles = scandir(__DIR__ . '/../database');
+$files = array_diff($allFiles, ['.', '..']);
+
+foreach ($files as $file) {
+  require_once __DIR__ . '/../database/' . $file;
+}

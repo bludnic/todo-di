@@ -1,0 +1,265 @@
+$gap1 = 8px
+$gap2 = 16px
+$gap3 = 24px
+$gap4 = 32px
+
+$gray = #6f6f6f
+$gray2 = #eaeaea
+$yellow = #fff9c0
+$link = #1a0dab
+
+.content {
+  //font-family: Roboto;
+  font-size: 18px
+  max-width: 100%
+  
+  code, kbd, tt, var, samp, pre {
+    font-family: Inconsolata, monospace // Need to impoty Inconsotata font
+    -webkit-hyphens: none
+    -moz-hyphens: none
+    -ms-hyphens: none
+    hyphens: none
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700
+    //margin-top: 1.5em
+    margin-top: $gap4
+    margin-bottom: $gap2
+  }
+  
+  h1 {
+    font-size: 32px
+  }
+  h2 {
+    font-size: 24px
+  }
+  h3 {
+    font-size: 18px
+  }
+  h4 {
+    font-size: 16px
+  }
+  h5 {
+    font-size: 13px
+  }
+  h6 {
+    font-size: 10px
+  }
+
+  > p {
+    margin-bottom: $gap2
+    
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+  
+  a {
+    color: #3273dc
+    
+    &:hover {
+      text-decoration: underline
+    }
+  }
+  
+  span {
+
+  }
+  
+  div {
+
+  }
+
+  figure {
+    display: block
+    margin-bottom: $gap2
+    &.wp-caption {
+      width: auto !important
+    }
+  }
+  
+  img {
+    height: auto
+    max-width: 100%
+  }
+  
+  b, strong {
+    font-weight: 700;
+  }
+  
+  em {
+    font-style: italic
+  }
+  
+  cite {
+    font-style: italic
+  }
+  
+  abbr, acronym {
+    color: $gray
+    border-bottom: 1px dotted $gray
+  }
+
+  abbr {
+    cursor: help
+  }
+  
+  acronym { // deprecated
+    cursor: default
+  }
+  
+  big { // deprecated
+
+  }
+  
+  code, tt {
+    background-color: whitesmoke
+    color: #ff3860
+    font-size: 0.875em
+    font-weight: normal
+    padding: 0.25em 0.5em 0.25em
+  }
+  
+  // Default by browser
+  // s, strike, del {
+
+  // }
+  
+  i {
+
+  }
+  
+  hr {
+    border: 0
+    height: 1px
+    background-color: whitesmoke
+    margin-top: 0
+    margin-bottom: $gap2
+  }
+  
+  small {
+    font-size: 85%; // use % for nested <small>
+  }
+  
+  /*
+   * Highlited text.
+   */
+  ins, u {
+    background-color: $yellow
+    text-decoration: none
+  }
+  
+  /*
+   * Keyboard text.
+   */
+  kbd {
+
+  }
+  
+  /*
+   * Variable Tag
+   */
+  var {
+
+  }
+  
+  pre {
+    margin-bottom: $gap2
+    background-color: whitesmoke
+    border: 1px solid $gray2
+    
+    //@function
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+  
+  /*
+   * Subscript Tag
+   */
+  sub {
+
+  }
+  
+  /*
+   * Superscript Tag
+   */
+  sup {
+
+  }
+
+  /*
+   * Lists
+   */
+  ul {
+    list-style: disc
+    list-style-position: inside
+    
+    ul {
+      margin-left: $gap2
+    }
+  }
+  
+  ol {
+    list-style-position: inside
+    
+    ol {
+      margin-left: $gap2
+    }
+
+    li {
+
+    }
+  }
+  
+  dl {
+    margin-bottom: $gap2
+    
+    dt {
+      font-weight: bold
+    }
+    
+    dd {
+      margin-bottom: $gap2
+    }
+  }
+  
+  /*
+   * Other
+   */
+  blockquote, q {
+    margin-bottom: $gap2
+    color: $gray
+  }
+  
+  blockquote {
+    padding-left: $gap2
+    border-left: 4px solid $gray
+    
+    p {
+      margin-bottom: 0
+    }
+    
+    em {
+      font-style: normal
+    }
+  }
+  
+  
+  table {
+    margin-bottom: $gap2
+    
+    th, td {
+      border: 1px solid #dbdbdb
+      padding: 0.25em 0.5em
+    }
+  }
+  
+  address {
+    font-style: italic;
+    margin-bottom: $gap2
+  }
+}

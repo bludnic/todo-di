@@ -1,0 +1,29 @@
+$icon-font-size := 24px
+$icon-line-height := 24px
+
+/**
+ * Icon element.
+ *
+ * Usage:
+ * <i class="icon mdi mdi-magnify"></i>
+ */
+.icon {
+  font-size: $icon-font-size
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  line-height: $icon-line-height
+  
+  &--18px {
+    font-size: 18px
+    line-height: 18px
+  }
+
+  &--left {
+    margin-right: 8px
+  }
+  
+  &--right {
+    margin-left: 8px
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * 
+ * <div class="flex">
+ *   <div class="xs6">
+ *   </div>
+ *   <div class="xs6">
+ *   </div>
+ * </div>
+ *
+ */
+
+$flex-grid-size := 12
+
+.flex {
+  display: flex
+  flex-direction: row
+
+  for size in (1..$flex-grid-size) {
+    .xs{size} {
+      width: (100 / ($flex-grid-size / size))%
+    }
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+/**
+ * Flex helpers.
+ */
+.d-flex {
+  display: flex
+}
+
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+.d-block {
+  display: block
+}
+
+.jc-start {
+  justify-content: start
+}
+  
+.jc-between {
+  justify-content: space-between
+}  
+
+.jc-around {
+  justify-content: space-around
+}
+
+.jc-center {
+  justify-content: center
+}
+
+.ai-left {
+  align-items: left
+}
+
+.ai-right {
+  align-items: right
+}
+
+.ai-center {
+  align-items: center
+}

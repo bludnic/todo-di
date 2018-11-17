@@ -1,0 +1,20 @@
+{% extends 'base.twig' %}
+
+{% block container %}
+  <div class="columns is-multiline">
+
+    <div class="column is-8">
+      <h2 class="display-1 mb-2">Todos</h2>
+      {% if todos is not empty %}
+        <todo-items :items="{{ todos|json_encode }}"/>
+      {% else %}
+        <div style="color:gray">No todos</div>
+      {% endif %}
+    </div>
+
+    <div class="column is-4">
+      <h2 class="display-1 mb-2">Add todo</h2>
+      <todo-item-add/>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+$table-td-height := 48px
+
+.table {
+  width: 100%
+  max-width: 100%
+  border-collapse: collapse
+  
+  thead {
+    tr:first-child {
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
+  }
+
+  tbody {
+    tr:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+    }
+  }
+  
+  thead th, tbody td {
+    height: $table-td-height
+    padding: 0 24px
+    text-align: left
+  }
+}

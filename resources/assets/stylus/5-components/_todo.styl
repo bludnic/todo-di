@@ -1,0 +1,39 @@
+$todo-background-color := #f0ede5
+
+.todo {
+  background-color: $todo-background-color
+  padding: 16px
+  position: relative
+  
+  &__body {
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 8px
+  }
+
+  &__media {
+    margin-right: 16px
+    width: 160px
+    height: 120px
+    
+    &-bg {
+      width: 100%
+      height: 100%
+      background-position: center center
+      background-size: cover
+      background-repeat: no-repeat
+      border-radius: inherit
+    }
+  }
+  
+  &__text {
+
+  }
+  
+  &__actions {
+    position: absolute
+    top: 0
+    right: 0
+    padding: 8px
+  }
+}

@@ -1,0 +1,57 @@
+{% include 'layout/head.twig' %}
+</head>
+
+<body>
+
+  <div id="app">
+    <div class="container mt-3">
+
+      <div class="card card--shadow">
+        <header>
+          {% include 'layout/navbar.twig' with { 'menu': menus.primary } %}
+        </header>
+
+        {# Main #}
+        <section class="section main">
+          {% block container %}
+            <div class="columns">
+              {% block main %}
+                <main class="column is-8">
+                  {% block content %}
+                    {{ __('Sorry, no content', textdomain) }}
+                  {% endblock %}
+                </main>
+                <aside class="column sidebar">
+                  {% do dynamic_sidebar('sidebar') %}
+                </aside>
+              {% endblock %}
+            </div>
+          {% endblock %}
+        </section>
+
+        {# Pagination #}
+        {% if pagination %}
+          <section class="section" style="margin-top:32px">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  {% include 'partials/pagination.twig' with { 'pagination': pagination } %}
+                </div>
+              </div>
+            </div>
+          </section>
+        {% endif %}
+
+        <footer class="footer section">
+          {% include 'layout/footer.twig' with { 'menu': menus.footer } %}
+        </footer>
+      </div>
+      
+      <app-snackbar/> {# <-- Vue Component #}
+
+    </div>
+  </div>
+
+  {# Scripts #}
+  <script src="{{ asset('/app.js') }}"></script>
+</body>

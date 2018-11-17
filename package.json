@@ -1,0 +1,32 @@
+{
+  "name": "todo-di",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "parcel build resources/assets/js/app.js -d public/assets",
+    "watch": "parcel watch resources/assets/js/app.js -d public/assets"
+  },
+  "author": "bludnic",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "lodash": "^4.17.11",
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.10.1",
+    "stylus": "^0.54.5",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}

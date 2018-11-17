@@ -1,0 +1,47 @@
+$tabs-bar-height := 40px
+$tabs-bar-min-width := 160px
+$tabs-bar-background := #fafafa
+$tabs-bar-background-focus := #eee
+$tabs-bar-background-active := #eee
+$tabs-bar-border-color := #eee
+
+.tabs {
+  display: flex
+  flex-direction: column
+  text-align: left
+
+  &__bar {
+    display: flex
+    border-bottom: 1px solid $tabs-bar-border-color
+    background-color: $tabs-bar-background
+  }
+  
+  &__bar-item {
+    display: flex
+    align-items: center
+    height: $tabs-bar-height
+    text-decoration: none
+    text-align: left
+    padding: 6px 12px
+    outline: none
+    box-sizing: border-box
+    cursor: pointer
+    
+    &:focus {
+      box-shadow: none
+      background-color: $tabs-bar-background-focus
+    }
+    
+    &--active {
+      background-color: $tabs-bar-background-active
+    }
+  }
+  
+  &__bar-item-content {
+
+  }
+  
+  &__items {
+    width: 100%
+  }
+}
