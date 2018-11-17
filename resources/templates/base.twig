@@ -18,11 +18,10 @@
               {% block main %}
                 <main class="column is-8">
                   {% block content %}
-                    {{ __('Sorry, no content', textdomain) }}
+                    Sorry, no content
                   {% endblock %}
                 </main>
                 <aside class="column sidebar">
-                  {% do dynamic_sidebar('sidebar') %}
                 </aside>
               {% endblock %}
             </div>
