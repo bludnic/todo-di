@@ -1,6 +1,6 @@
 <?php
 
-if (!getenv('APP_DEBUG')) { // @TODO: fix this shit. Temporary lifehack to deploy on Heroku.
+if (!getenv('APP_PRODUCTION')) { // @TODO: fix this shit. Temporary lifehack to deploy on Heroku.
   $dotenv = new Symfony\Component\Dotenv\Dotenv();
   $dotenv->load(__DIR__ . '/../.env');
 }
